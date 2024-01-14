@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Arthur Nery - Filipino Singer</title>
+    <link rel="icon" href="images/arthur.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                ☰ Menu
+            </div>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#latest song">Songs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="content">
+            <section id="home">
+                <h1>Arthur Nery</h1>
+                <p>"Arthur Nery: Weaving Emotions into Every Note, Painting Stories with Every Song."</p>
+            </section>
+
+            <section id="about">
+                <h2>About Arthur</h2>
+                <div class="container">
+                    <div class="two-column">
+                        <div class="media">
+                            <img src="images/arthur 1.jpg" alt="Arthur Nery's Media">
+                        </div>
+                        <div class="text">
+                            <p>Name: Arthur Nery (Arthur Madrigalejos Nery)<br>
+                                Birthdate: January 28, 1996<br>
+                                Birthplace: Cagayan de Oro, Philippines<br>
+                                Nery was born and raised in Cagayan de Oro to a musical family. Both of his parents were singers. The first time he performed in public was when he was eight years old, where he sang "Fly Me to the Moon" for a cousin's debut party. Even so, a career in music was never considered by Nery at the time.[1][2]
+                                He started writing songs seriously in high school, and received some formal training in singing after joining the glee club in college. He attended Xavier University — Ateneo de Cagayan and majored in Psychology. Before going full-time in his music career, he worked as a call center agent and as an online English teacher for Japanese students.[1][3]
+                                Nery was booked to sing in comedian Wacky Kiray's show in Bukidnon, who later introduced him to Callalily's frontman Kean Cipriano who at the time had just launched his own label, O/C. On the same night, Nery signed with O/C.</p>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+
+            <section id="latest song">
+                <h2>Songs</h2>
+                <iframe width="80%" height="315" src="videos/o ninanais - Arthur Nery (Official Lyric Visualizer).mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h2>Most Popular Song</h2>
+                <iframe width="80%" height="315" src="videos/Pagsamo.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="container">
+
+                    
+            
+                    
+            
+
+                     
+                    </div>
+            
+                </div>
+            </section>
+
+       
+            <section id="contact">
+                <h2>Do you like this website?
+                    <br>Send your message now!!
+                </h2>
+                <div class="">
+                <div class="contact-form" id="contactForm">
+                    <form id="form">
+                      <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                      </div>
+                  
+                      <button type="button" onclick="sendMessage()">Send</button>
+                    </form>
+                  
+                    <div class="message" id="successMessage">
+                      Message sent! <span class="close-btn" onclick="closeMessage()">Close</span>
+                    </div>
+                  </div>
+                  </div>
+            
+            </section>
+        </div>
+
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    mobileMenu.addEventListener('click', function () {
+        navList.classList.toggle('show');
+    });
+
+    // Close menu when close button is clicked
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.navbar') && navList.classList.contains('show')) {
+            navList.classList.remove('show');
+        }
+    });
+});
+
+function sendMessage() {
+    document.getElementById("successMessage").style.display = "block";
+  }
+
+  function closeMessage() {
+    document.getElementById("successMessage").style.display = "none";
+  }
+    </script>
+</body>
+</html>
